@@ -1,0 +1,61 @@
+<%- include("partials/header") %>
+    <!-- navbar section -->
+    <section id="header">
+        <a href="/" id="logo">Sweet Cake</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><strong> Menu</strong>
+                    <div class="dropdown-content">
+                        <a href="/cupcake">cake</a>
+                        <a href="/cupcake">cupcake</a>
+                        <a href="/cupcake">topping</a>
+
+                    </div>
+                </li>
+                <li><a href="/">About</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-cart-arrow-down"></i></a></li>
+                <li class="dropdown"><i class="fas fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="/manage">manage</a>
+                        <a href="/add-product" class="active">add product</a>
+                        <!--                     <a href="/log in">Log In</a>
+                    <a href="/Sign Up">Sign Up</a> -->
+                        <a href="/add-product">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <i id="bar" class="fas fa-bars cus-icon fa-fw py-1"></i>
+        </div>
+    </section>
+
+    <form class="form-horizontal" method="POST" action="/insert" enctype="multipart/form-data">
+        <section class="addform-section">
+            <div class="form-cont">
+                <div class="form">
+                    <h1 class="form-heading">Add Product</h1><a href="/logout">log out</a></p>
+                    <input type="name" name="name" placeholder="name">
+                    <input type="text" name="category" placeholder="category">
+                    <input type="file" name="image" placeholder="image" id="file">
+                    <input type="text" name="price" placeholder="price">
+                    <textarea type="text" name="des" placeholder="Add Detail cake.."></textarea>
+
+                    <button class="submit-btn" type="submit">Submit</button>
+                </div>
+
+            </div>
+        </section>
+    </form>
+
+
+    <script src="/js/script.js"></script>
+    <script src="/js/detail.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/form.js"></script>
+    </footer>
+    </body>
+
+    </html>

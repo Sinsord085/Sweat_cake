@@ -1,0 +1,117 @@
+<%- include("partials/header") %>
+    <!-- navbar section -->
+    <section id="header">
+        <a href="/" id="logo">Sweet Cake</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><strong> Menu</strong>
+                    <div class="dropdown-content">
+                        <a href="/cake">cake</a>
+                        <a href="/cupcake">cupcake</a>
+                        <a href="/topping">topping</a>
+
+                    </div>
+                </li>
+                <li><a href="/">About</a></li>
+                <li id="lg-bag"><a href="/cart" class="active"><i class="fas fa-cart-arrow-down"></i></a></li>
+                <li class="dropdown"><i class="fas fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="/manage">manage</a>
+                        <a href="/add-product">add product</a>
+                        <!--                     <a href="/log in">Log In</a>
+                    <a href="/Sign Up">Sign Up</a> -->
+                        <a href="/add-product">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <i id="bar" class="fas fa-bars cus-icon fa-fw py-1"></i>
+        </div>
+    </section>
+
+
+    <form method="POST" action="/">
+        <!--   page-header section -->
+        <section id="page-header">
+            <h1>C A K E</h1>
+            <p>Our cakes are freshly baked to order using only the best ingredients. Order online in Sweet Cake</p>
+        </section>
+
+        <!--   cart section -->
+        <section id="cart" class="section-p1">
+
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class='fa fa-window-close'></i></td>
+                        <td><img src="https://letocaffe.co.uk/uk_uploads/2018/12/1.jpg"></td>
+                        <td> Pistachio & Almond Dulce Nougat Cake</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>$55.00</td>
+                    </tr>
+
+                    <tr>
+                        <td><i class='fa fa-window-close'></i></td>
+                        <td><img src="https://letocaffe.co.uk/uk_uploads/2021/04/1.jpg"></td>
+                        <td>Yuzu & Earl Grey Macaron</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>$55.00</td>
+                    </tr>
+                    <tr>
+                        <td><i class='fa fa-window-close'></i></td>
+                        <td><img src="https://letocaffe.co.uk/uk_uploads/2017/09/699A4563-scaled-600x600.jpg"></td>
+                        <td> Pistachio & Almond Dulce Nougat Cake</td>
+                        <td><input type="number" value="1" name="" id=""></td>
+                        <td>$55.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </section>
+
+        <!--   coupon & subtotal section -->
+        <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <div>
+                    <input type="text" placeholder="Enter Your Coupon">
+                    <button class="normal">Apply</button>
+                </div>
+            </div>
+
+            <div id="subtotal">
+                <h3>Cart Totals</h3>
+                <table>
+                    <tr>
+                        <td>Cart Subtotal</td>
+                        <td>$220.00</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>$220.00</strong></td>
+                    </tr>
+                </table>
+                <button class="normal">Proceed to checkout</button>
+            </div>
+
+        </section>
+    </form>
+
+    <%- include("partials/footer") %>

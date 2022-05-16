@@ -1,0 +1,164 @@
+        /* start media query */
+        
+        @media (max-width:799px) {
+            .section-p1 {
+                padding: 40px 0;
+                margin-left: 30px;
+            }
+            #navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: fixed;
+                top: 0;
+                right: -300px;
+                height: 30vh;
+                width: 260px;
+                background-color: #fff;
+                box-shadow: 0 10px 10px #ff0844;
+                padding: 80px 0 0 10px;
+                transition: 0.3s;
+            }
+            #navbar.active {
+                right: 0px;
+            }
+            #navbar li {
+                margin-bottom: 25px;
+            }
+            #mobile {
+                display: flex;
+                align-items: center;
+            }
+            #mobile i {
+                color: #1a1a1a;
+                font-size: 24px;
+                padding-left: 20px;
+            }
+            #close {
+                display: initial;
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+            #lg-bag {
+                display: none;
+            }
+            .header-section {
+                width: 80vh;
+                height: 60vh;
+                padding: 0 80px;
+            }
+            #banner {
+                justify-content: center;
+            }
+            #banner .banner-box {
+                width: 200px;
+                height: 300px;
+                margin: 20px;
+                min-width: 540px;
+            }
+            #product1 .pro-container {
+                justify-content: center;
+            }
+            #product1 .pro {
+                margin: 30px;
+            }
+            footer {
+                justify-content: center;
+                margin: 20px;
+            }
+            footer h1 {
+                display: none;
+            }
+        }
+        
+        #page-header {
+            width: 110%;
+            height: 60vh;
+        }
+        
+        .review .edit {
+            margin-left: 250px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        @media (max-width:477px) {
+            .section-p1 {
+                width: 80vh;
+            }
+            #header {
+                padding-left: 30px;
+                padding-right: 60px;
+            }
+            #navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: fixed;
+                top: 0;
+                right: -300px;
+                height: 45vh;
+                width: 200px;
+                background-color: #fff;
+                box-shadow: 0 10px 10px #ff0844;
+                padding: 80px 0 0 10px;
+                transition: 0.3s;
+            }
+            .header-section {
+                height: 400px;
+                width: 90vh;
+            }
+            .header-section h1 {
+                font-size: 110px;
+                line-height: 100px;
+            }
+            #banner .banner-box {
+                height: 270px;
+                width: 50vh;
+                padding: 20px;
+            }
+            #banner h1 {
+                text-align: center;
+                font-size: 28px;
+            }
+            #product1 {
+                text-align: center;
+                padding: 1.5cm;
+            }
+            #product1 .pro {
+                width: 30%;
+                min-width: 350px;
+            }
+            footer .col {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            footer h1 {
+                display: none;
+            }
+            #page-header {
+                width: 150%;
+                height: 60vh;
+            }
+            #page-header h1 {
+                margin-top: 120px;
+            }
+            #product1 .pro {
+                width: 30%;
+                min-width: 320px;
+            }
+            #prodetails .single-pro-details h4 {
+                padding: 20px 0 0 0;
+                font-size: 30px;
+            }
+            #prodetails .single-pro-details {
+                width: 70%;
+                padding-top: 90px;
+                margin: 2px;
+            }
+        }

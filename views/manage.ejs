@@ -1,0 +1,89 @@
+<%- include("partials/header") %>
+    <!-- navbar section -->
+    <section id="header">
+        <a href="/" id="logo">Sweet Cake</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><strong> Menu</strong>
+                    <div class="dropdown-content">
+                        <a href="/cake">cake</a>
+                        <a href="/cupcake">cupcake</a>
+                        <a href="/topping">topping</a>
+
+                    </div>
+                </li>
+                <li><a href="/">About</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-cart-arrow-down"></i></a></li>
+                <li class="dropdown"><i class="fas fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="/manage" class="active">manage</a>
+                        <a href="/add-product">add product</a>
+                        <!--                     <a href="/log in">Log In</a>
+                    <a href="/Sign Up">Sign Up</a> -->
+                        <a href="/add-product">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <i id="bar" class="fas fa-bars cus-icon fa-fw py-1"></i>
+        </div>
+    </section>
+
+
+    <section id="manage" class="section-p1">
+        <table>
+            <h2>Manage Product</h2>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>category</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>delete</th>
+                    <th>edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% Object.values(products).forEach(function(item){%>
+                    <tr>
+                        <td>
+                            <%= item.name%>
+                        </td>
+                        <td>
+                            <%= item.category%>
+                        </td>
+                        <td>
+                            <%= item.price%>
+                        </td>
+                        <td>
+                            <%= item.des%>
+                        </td>
+                        <td><a class="click" href="/delete/<%= item._id%>" onclick="return confirm('Do you want to delete the data?')">delete</a></td>
+                        <td>
+                            <form action="/edit" method="POST">
+                                <input type="hidden" name="edit_id" value="<%= item._id%>">
+                                <button type="submit" class="click" class="normal">edit</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+
+
+    <script src="/js/script.js"></script>
+    <script src="/js/detail.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/form.js"></script>
+    </footer>
+    </body>
+
+    </html>

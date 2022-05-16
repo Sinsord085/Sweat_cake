@@ -1,0 +1,73 @@
+<%- include("partials/header") %>
+    <!-- navbar section -->
+    <section id="header">
+        <a href="/" id="logo">Sweet Cake</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><strong> Menu</strong>
+                    <div class="dropdown-content">
+                        <a href="/cupcake">cake</a>
+                        <a href="/cupcake" class="active">cupcake</a>
+                        <a href="/cupcake">topping</a>
+
+                    </div>
+                </li>
+                <li><a href="/">About</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-cart-arrow-down"></i></a></li>
+                <li class="dropdown"><i class="fas fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="/manage">manage</a>
+                        <a href="/add-product">add product</a>
+                        <!--                     <a href="/log in">Log In</a>
+                    <a href="/Sign Up">Sign Up</a> -->
+                        <a href="/add-product">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <i id="bar" class="fas fa-bars cus-icon fa-fw py-1"></i>
+        </div>
+    </section>
+
+    <!--   page-header section -->
+    <section id="page-header">
+        <h1>C U P C A K E</h1>
+        <p>Our cakes are freshly baked to order using only the best ingredients. Order online in Sweet Cake</p>
+    </section>
+
+
+    <!-- Cake section -->
+    <section id="product1" class="section-p1"><br><br>
+        <% Object.values(products).forEach(function(item){%>
+            <div class="pro-container">
+                <div class="pro">
+                    <a href="/<%= item._id %>">
+                <img src="/img/product/<%= item.image %>" alt="">
+                <div class="des">
+                    <span><%= item.category %></span>
+                    <h5>
+                        <%= item.name %>
+                    </h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$
+                        <%= item.price %>
+                    </h4>
+                </div>
+                <div class="cart">
+                    <a href="#"><i class="fas fa-cart-arrow-down"></i></a></div>
+                </a>
+            </div>
+
+            </div>
+            <% }) %>
+    </section>
+    <%- include("partials/footer") %>

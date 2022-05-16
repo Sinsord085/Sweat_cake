@@ -1,0 +1,60 @@
+<%- include("partials/header") %>
+    <!-- navbar section -->
+    <section id="header">
+        <a href="/" id="logo">Sweet Cake</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><strong> Menu</strong>
+                    <div class="dropdown-content">
+                        <a href="/cake">cake</a>
+                        <a href="/cupcake">cupcake</a>
+                        <a href="/topping">topping</a>
+
+                    </div>
+                </li>
+                <li><a href="/">About</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fas fa-cart-arrow-down"></i></a></li>
+                <li class="dropdown"><i class="fas fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="/manage" class="active">manage</a>
+                        <a href="/add-product">add product</a>
+                        <!--                     <a href="/log in">Log In</a>
+                    <a href="/Sign Up">Sign Up</a> -->
+                        <a href="/add-product">Log in</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-cart-arrow-down"></i></a>
+            <i id="bar" class="fas fa-bars cus-icon fa-fw py-1"></i>
+        </div>
+    </section>
+    <form method="POST" action="/update">
+        <input type="hidden" value="<%= product._id %>" name="update_id">
+        <section class="addform-section">
+            <div class="form-cont">
+                <div class="form">
+                    <h1 class="form-heading">Edit Product</h1>
+                    <input type="text" name="name" placeholder="name" value="<%=product.name%>">
+                    <input type="text" name="category" placeholder="category" value="<%=product.category%>">
+                    <input type="text" name="price" placeholder="price" value="<%=product.price%>">
+                    <textarea type="text" name="des" placeholder="Add Detail cake.." value="<%=product.des%>"></textarea>
+                    <button class="submit-btn" type="submit">Update</button><br>
+                    <button class="submit-btn" a href="/manage">manage</a></button>
+                </div>
+
+            </div>
+        </section>
+    </form>
+
+
+    <script src="/js/script.js"></script>
+    <script src="/js/detail.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/form.js"></script>
+    </footer>
+    </body>
+
+    </html>

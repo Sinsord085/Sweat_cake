@@ -1,0 +1,194 @@
+/*Single Product*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+#prodetails {
+    display: flex;
+}
+
+#prodetails .single-pro-image {
+    padding-top: 90px;
+    width: 40%;
+    margin-right: 100px;
+}
+
+.small-img-group {
+    padding-top: 20px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+    margin-bottom: -60px;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 90px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 20px 0 0 0;
+    font-size: 35px;
+    width: 100%;
+    white-space: nowrap;
+    word-spacing: 0.2px;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 63px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details button {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #ff8177;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid #ff8177;
+    background-color: transparent;
+    transition: 0.2s;
+    /* margin-bottom: 40px; */
+}
+
+#prodetails .single-pro-details span {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+
+/* star rating*/
+
+.rating {
+    border: none;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rating>input {
+    display: none;
+}
+
+.rating>label:before {
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating>.half:before {
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating>label {
+    color: #ddd;
+    float: right;
+    cursor: pointer;
+}
+
+.rating>input:checked~label,
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: rgb(243, 181, 25);
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked~label:hover,
+.rating>label:hover~input:checked~label,
+.rating>input:checked~label:hover~label {
+    color: #ff8177;
+}
+
+.review .post {
+    display: none;
+}
+
+.review .text {
+    font-size: 25px;
+    color: #ff8177;
+    font-weight: 500;
+}
+
+.review .edit {
+    margin-left: 400px;
+    font-size: 16px;
+    color: #ff8177;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.review .edit:hover {
+    text-decoration: underline;
+}
+
+form .textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+form .textarea textarea {
+    height: 97%;
+    width: 100%;
+    outline: none;
+    color: #000;
+    border: 2.5px solid #ff8177;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.textarea textarea:focus {
+    border-color: #ff8177;
+}
+
+form .btn {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .btn button {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ff8177;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #ff8177;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
